@@ -1,0 +1,17 @@
+section.feedback
+    h2.feedback__title необходима консультация?
+    div.feedback__subtitle оставьте заявку или свяжитесь с нами в социальных сетях
+    div.social.feedback__social
+        each val in ['@img/icons/icons.svg#vk', '@img/icons/icons.svg#telegram', '@img/icons/icons.svg#instagram', '@img/icons/icons.svg#whatsapp']
+            a.social__link.social__link--feedback(href='/' target='_blank' title='Social')
+                svg.social__icon.social__icon--orange: use(href= val)
+    div.form
+        div.form__title Для 
+            span консультации 
+            | заполните форму!
+        div.form__subtitle С Вами свяжутся в ближайшее время
+        form.form__feedback
+            input.form__input(type='text', placeholder='Ваше имя')
+            input.form__input(type='phone', placeholder='Ваш телефон')
+            button.form__btn(type='submit') Отправить
+            

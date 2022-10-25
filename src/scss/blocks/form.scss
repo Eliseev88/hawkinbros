@@ -1,0 +1,107 @@
+.form {
+    margin: 3.9rem auto 0;
+    padding: 5.7rem 5.5rem 6.1rem 5.9rem;
+    max-width: 86.6rem;
+    box-shadow: 0px 4px 50px rgba(0, 0, 0, 0.15);
+
+    @media ($mobile) {
+        margin-top: 3.5rem;
+        padding: 4.8rem 0;
+    }
+
+    @media ($mobile-sm) {
+        border-top: 1px solid #E5E5E5;
+        padding: 2.5rem 0 0;
+        margin-bottom: 4.8rem;
+        box-shadow: none;
+    }
+}
+
+.form__title {
+    margin-bottom: 1.2rem;
+    @include font (2rem, 500, $main, 2.2rem);
+
+    & span {
+        font-weight: 700;
+        color: $orange;
+    }
+
+    @media ($screen-l) {
+        text-align: center;
+    }
+
+    @media ($mobile-sm) {
+        font-size: 1.8rem;
+        line-height: 2.6rem;
+        margin-bottom: .9rem;
+    }
+}
+
+.form__subtitle {
+    margin-bottom: 2.2rem;
+    @include font (1.6rem, 400, $main, 3rem);
+
+    @media ($screen-l) {
+        text-align: center;
+    }
+
+    @media ($mobile-sm) {
+        margin-bottom: 2.7rem;
+        font-size: 1.4rem;
+        line-height: 2.5rem;
+    }
+}
+
+.form__feedback {
+    display: flex;
+    justify-content: space-between;
+
+    @media ($screen-l) {
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+.form__input,
+.form__btn {
+    width: 24rem;
+    height: 5.6rem;
+    border-radius: 4px;
+}
+
+.form__input {
+    padding: 1.7rem;
+    border: 1px solid #E5E5E5;
+
+    &::placeholder {
+        @include font (1.4rem, 500, $gray, 2.2rem);
+    }
+
+    @media ($screen-l) {
+        margin-bottom: 1.5rem;
+    }
+
+    @media ($mobile) {
+        width: 35.4rem;
+    }
+
+    @media ($mobile-sm) {
+        width: 100%;
+    }
+}
+
+.form__btn {
+    background: #215359;
+    cursor: pointer;
+    color: #FFFFFF;
+    transition: box-shadow .2s linear;
+    @include font (1.6rem, 700, $footer, 2rem);
+
+    &:hover {
+        box-shadow: 0px 1px 10px rgba(0, 0, 0, 0.15);
+    }
+
+    @media ($mobile) {
+        margin-top: 2.5rem;
+    }
+}

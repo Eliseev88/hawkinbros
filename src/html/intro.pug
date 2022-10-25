@@ -1,0 +1,33 @@
+section.intro
+    h1.intro__title Монтаж дымоходов
+    div.breadcrumps
+        a.breadcrumps__parent(href='/') Главная
+        span.breadcrumps__arrow >
+        span.breadcrumps__child Монтаж дымоходов
+    p.intro__description В 
+        a(href='/') Дымоход.ру  
+        | вам помогут как приобрести, так и установить дымоход любой конфигурации. В нашем монтажном отделе, состоящим из трёх бригад работают квалифицированные специалисты, которые ежегодно проходят курсы повышения квалификации. Все работы проводим качественно и аккуратно, в короткий срок и на совесть .
+    div.intro__box
+        div.intro__col-left
+            h2.intro__suptitle Lorem ipsum dolor sit amet
+            h3.intro__subtitle Lorem ipsum
+            ul.intro__list
+                each val in ['Доступные цены', 'Собственное производсвто Дымоходов', 'Выполнение необходимых работ, связанных с установкой камина, печи, котла', 'Гарантия (от трёх до десяти лет)', 'Работаем чисто, аккуратно, убираем за собой, не сквернословим', 'Только русские квалифицированные специалисты', 'Устанавливаем любые дымоходы всех производителей']
+                    li.intro__element= val
+        div.intro__col-right
+            img.intro__image(src='@img/chimney.png' alt='chimney')
+            img.intro__dots(src='@img/dots.png')
+            img.intro__dots.intro__dots--right(src='@img/dots.png')
+            div.intro__triangles
+                svg.intro__triangle
+                    use(href='@img/icons/icons.svg#triangle-right')
+                svg.intro__triangle.intro__triangle--orange
+                    use(href='@img/icons/icons.svg#triangle-right')
+            div.intro__triangles.intro__triangles--right
+                svg.intro__triangle
+                    use(href='@img/icons/icons.svg#triangle-right')
+                svg.intro__triangle.intro__triangle--orange
+                    use(href='@img/icons/icons.svg#triangle-right')
+                svg.intro__triangle
+                    use(href='@img/icons/icons.svg#triangle-right')
+            

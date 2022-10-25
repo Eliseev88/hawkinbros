@@ -1,0 +1,36 @@
+footer.footer
+    div.wrapper
+        div.container
+            div.footer__wrapper
+                div.footer__block
+                    div.footer__title КАТАЛОГ
+                    div.footer__links
+                        each val in ['Дымоходы', 'Дымососы', 'Печи для дома', 'Печи для бани', 'Камины', 'Силикат кальция', 'Котлы', 'Ещё']
+                            a.footer__link(href='/')= val          
+                div.footer__block
+                    div.footer__title ИНФОРМАЦИЯ
+                    div.footer__links
+                        each val in ['Каталог', 'Установка и монтаж', 'Отзывы', 'Ликвидация товара', 'Полезное', 'Контакты', 'Оплата и доставка']
+                            a.footer__link(href='/')= val
+                div.footer__block
+                    div.footer__title ВРЕМЯ РАБОТЫ
+                    div.footer__contacts
+                        svg.footer__clock
+                            use(href='@img/icons/icons.svg#clock')
+                        div.footer__date 
+                            span пн-пт 
+                            | 9:00 – 20:00   
+                            span сб-вс 
+                            | 10:00 – 18:00
+                    div.footer__contacts
+                        svg.footer__map
+                            use(href='@img/icons/icons.svg#map')
+                        address.footer__date.ml-1 г. Санкт - Петербург ,ул. Тамбасова д.7
+                    div.footer__icons
+                        each val in ['@img/icons/icons.svg#vk', '@img/icons/icons.svg#telegram', '@img/icons/icons.svg#instagram', '@img/icons/icons.svg#whatsapp']
+                            a.footer__social(href='/' target='_blank' title='Social')
+                                svg.footer__icon: use(href= val)
+                div.footer__media
+                    each val in ['@img/icons/icons.svg#vk', '@img/icons/icons.svg#telegram', '@img/icons/icons.svg#instagram', '@img/icons/icons.svg#whatsapp']
+                        a.footer__social(href='/' target='_blank' title='Social')
+                            svg.footer__icon: use(href= val)

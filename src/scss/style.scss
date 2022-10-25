@@ -1,0 +1,83 @@
+@import 'fonts';
+@import 'vars';
+@import 'helpers';
+
+*,
+*:before,
+*:after {
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+html,
+body {
+    height: 100%;
+}
+
+body {
+    margin: 0;
+    font-family: 'Montserrat';
+    font-style: normal;
+    display: flex;
+    flex-direction: column;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    margin: 0;
+}
+
+p {
+    margin: 0 0 1rem;
+}
+
+input,
+button,
+textarea {
+    font-family: inherit;
+}
+
+button {
+    padding: 0;
+    border: 0;
+    background: none;
+}
+
+.content {
+    flex: 1 0 auto;
+}
+
+.container {
+    max-width: 1220px;
+    margin: 0 auto;
+}
+
+.wrapper {
+    max-width: 1920px;
+    padding: 0 7.4rem 0 6.3rem;
+    
+    @media ($screen-l) {
+        padding: 0 1.6rem;
+    }
+}
+
+/* Blocks */
+@import 'blocks/header';
+@import 'blocks/nav';
+@import 'blocks/footer';
+@import 'blocks/social';
+@import 'blocks/intro';
+@import 'blocks/breadcrumps';
+@import 'blocks/process';
+@import 'blocks/advantages';
+@import 'blocks/feedback';
+@import 'blocks/form';
+@import 'blocks/video';
+@import 'blocks/gallery';

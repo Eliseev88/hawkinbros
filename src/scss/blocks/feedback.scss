@@ -1,0 +1,42 @@
+.feedback {
+    margin-bottom: 10.8rem;
+
+    @media ($mobile) {
+        margin-bottom: 5.8rem;
+    }
+
+    @media ($mobile-sm) {
+        margin-bottom: 4.8rem;
+    }
+}
+
+.feedback__title {
+    @include font (5rem, 800, $main, normal);
+    text-align: center;
+    text-transform: uppercase;
+
+    @media ($mobile) {
+        line-height: normal;
+        font-size: 3.9rem;
+    }
+    
+    @media ($mobile-sm) {
+        font-size: 2.2rem;
+    }
+}
+
+.feedback__subtitle {
+    margin-bottom: 3rem;
+    @include font (1.6rem, 300, $main, 3rem);
+    text-align: center;
+    
+    @media ($mobile-xs) {
+        font-size: 1.4rem;
+        line-height: 2.6rem;
+    }
+}
+
+.feedback__social {
+    justify-content: center;
+    margin-right: 0;
+}
