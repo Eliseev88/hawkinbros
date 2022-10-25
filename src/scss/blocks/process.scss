@@ -1,0 +1,88 @@
+.process {
+    margin-bottom: 10.2rem;
+    
+    @media ($mobile) {
+        margin-bottom: 5.5rem;
+    }
+    
+    @media ($mobile-sm) {
+        margin-bottom: 3.6rem;
+    }
+}
+
+.process__title {
+    margin-bottom: 5.1rem;
+    @include font (4rem, 600, $main, 4.9rem);
+    position: relative;
+
+    @media ($mobile) {
+        margin-bottom: 3rem;
+        font-size: 3rem;
+        line-height: 3.7rem;
+    }
+
+    @media ($mobile-sm) {
+        margin-bottom: 1.1rem;
+    }
+
+    &:before {
+        content: '';
+        width: 7.4rem;
+        height: .5rem;
+        background-color: $pink;
+        position: absolute;
+        left: 0;
+        top: -1.6rem;
+    }
+}
+
+.process__list {
+    padding: 0;
+    margin: 0;
+    counter-reset: item;
+    list-style-type: none;
+    display: grid;
+    grid-template: 1fr 1fr 1fr / 1fr 1fr;
+    grid-auto-flow: column;
+    grid-row-gap: 1.3rem;
+    grid-column-gap: 2.8rem;
+
+    @media ($mobile-sm) {
+        grid-template: repeat(6, auto) / 1fr;
+        grid-column-gap: 0;
+    }
+}
+
+.process__element {
+    display: flex;
+    align-items: center;
+    @include font (1.6rem, 400, $main, 3rem);
+
+    @media ($mobile) {
+        font-size: 1.4rem;
+        line-height: 2.6rem;
+    }
+    
+    @media ($mobile-sm) {
+        line-height: normal;
+    }
+
+    &:before {
+        margin-right: 3.6rem;
+        content: counter(item) "  ";
+        opacity: .2;
+        @include font (7rem, 700, $pink, 8.5rem);
+        counter-increment: item;
+
+        @media ($mobile) {
+            margin-right: 1.1rem;
+            font-size: 5rem;
+            line-height: 6.1rem;
+        }
+
+        @media ($mobile-sm) {
+            margin-right: 1.5rem;
+            line-height: normal;
+        }
+    }
+}

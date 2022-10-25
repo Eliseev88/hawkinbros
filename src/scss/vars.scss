@@ -1,0 +1,24 @@
+/* COLORS */
+$link: #4C858B;
+$main: #000;
+$gray: #B1B1B1;
+$orange: #EA6628;
+$pink: #E33E54;
+$footer: #FFF;
+$background: #0C2F33;
+
+/* FONTS */
+@mixin font ($fontSize, $fontWeight, $color, $lineHeight) {
+    font-size: $fontSize;
+    font-weight: $fontWeight;
+    color: $color;
+    line-height: $lineHeight;
+}
+
+/* Media queries */
+$mobile-xs: "(max-width: 320px)";
+$mobile-sm: "(max-width: 565px)";
+$mobile: "(max-width: 768px)";
+$tablet: "(max-width: 991px)";
+$laptop: "(max-width: 1199px)";
+$screen-l: "(max-width: 1906px)";

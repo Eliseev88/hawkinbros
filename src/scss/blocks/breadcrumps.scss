@@ -1,0 +1,33 @@
+.breadcrumps {
+    margin-bottom: 8.1rem;
+    padding: 1.4rem 0 1.9rem;
+    border-top: 1px solid #E5E5E5;
+    border-bottom: 1px solid #E5E5E5;
+    
+    @media ($mobile) {
+        margin-bottom: 6rem;
+    }
+    @media ($mobile-sm) {
+        margin-bottom: 1.6rem;
+    }
+}
+
+.breadcrumps__parent {
+    text-decoration: none;
+    @include font (1.2rem, 400, $gray, 1.5rem);
+    transition: color .2s linear;
+    cursor: pointer;
+
+    &:hover {
+        color: darken($gray, 15%);
+    }
+}
+
+.breadcrumps__arrow,
+.breadcrumps__child {
+    @include font (1.2rem, 400, $link, 1.5rem);
+}
+
+.breadcrumps__arrow {
+    margin: 0 .7rem 0 .8rem;
+}

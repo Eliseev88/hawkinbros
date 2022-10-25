@@ -1,0 +1,42 @@
+.gallery {
+    margin-bottom: 13.6rem;
+    
+    @media ($mobile) {
+        margin-bottom: 5.6rem;
+    }
+}
+
+.gallery__grid {
+    text-align: center;
+}
+
+.gallery__image {
+    display: inline-block;
+    width: 30.2rem;
+    height: 28rem;
+    position: relative;
+
+    &::after {
+        content: '';
+        width: 5rem;
+        height: 5rem;
+        background-color: transparent;
+        border-top: 5px solid $link;
+        border-right: 5px solid $link;
+        position: absolute;
+        right: 4px;
+        top: 0;
+    }
+
+    &::before {
+        content: '';
+        width: 5rem;
+        height: 5rem;
+        background-color: transparent;
+        border-bottom: 5px solid $link;
+        border-left: 5px solid $link;
+        position: absolute;
+        left: 4px;
+        bottom: 8px;
+    }
+}

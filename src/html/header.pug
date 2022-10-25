@@ -1,0 +1,38 @@
+header.header
+    a(href='/' title='На главную').header__logo
+        img(src='@img/Logo.png' alt='logo')
+    button.header__burger-btn
+        include ../svgicons/burger_menu.svg
+    div.header__info
+        nav.nav
+            ul.nav__list
+                li.nav__element
+                    a.nav__link(href='/') каталог товаров
+                li.nav__element
+                    a.nav__link(href='/') доставка и оплата
+                li.nav__element
+                    a.nav__link(href='/') цены
+                li.nav__element 
+                    a.nav__link(href='/') контакты
+        a.header__phone(href='tel:+78125092198')
+            span +7 (812)
+            | 
+            span 509 21 98
+        button.header__call перезвоните мне
+        div.social
+            each val in ['@img/icons/icons.svg#vk', '@img/icons/icons.svg#telegram', '@img/icons/icons.svg#instagram', '@img/icons/icons.svg#whatsapp']
+                a.social__link(href='/' target='_blank' title='Social')
+                    svg.social__icon: use(href= val)
+    div.header__services
+        div.header__hidden
+            button.header__circle-btn
+                svg.header__search
+                    use(href='@img/icons/icons.svg#search')
+            button.header__circle-btn
+                svg.header__heart
+                    use(href='@img/icons/icons.svg#heart')
+        button.header__circle-btn
+            div.header__basket-count 10
+            svg.header__basket
+                use(href='@img/icons/icons.svg#basket')
+                
