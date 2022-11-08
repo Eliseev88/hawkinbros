@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <!-- Домашнее задание 1:
+На различных сайтах можно встретить опцию переключения цветовой темы. 
+Необходимо реализовать возможность выбрать и сохранить background-color блока, 
+чтобы даже после закрытия и открытия вкладки, выбранный цвет сохранился-->
+
+    <button id="dark" data-theme="black">Темная тема</button>
+    <button id="light" data-theme="lightgray">Светлая тема</button>
+
+
+    <!-- Автосохранение поля формы
+Создайте поле textarea, значение которого будет автоматически сохраняться при каждом его изменении.
+
+Когда пользователь закроет страницу и потом откроет её заново он должен увидеть последнее введённое значение. -->
+    <div>
+        <br>
+        <textarea style="width:200px; height: 60px;" id="area" placeholder="Напишите сообщение здесь"></textarea>
+        <br>
+        <button onclick="localStorage.removeItem('area');area.value=''">Очистить</button>
+    </div>
+
+    <script>
+        if (localStorage.getItem('theme')) {
+            const theme = localStorage.getItem('theme');
+            document.body.style.background = theme;
+        }
+
+        document.addEventListener('click', (e) => {
+            if (!e.target.dataset.theme) return;
+            document.body.style.background = e.target.dataset.theme;
+            localStorage.setItem('theme', e.target.dataset.theme);
+        })
+
+
+        area.value = localStorage.getItem('area');
+        area.oninput = () => {
+            localStorage.setItem('area', area.value)
+        };
+    </script>
+
+</body>
+
+</html>
